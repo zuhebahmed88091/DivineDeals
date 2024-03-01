@@ -6,12 +6,12 @@ import { useState } from "react";
 export default function Navbar() {
   const [menu, setMenu] = useState("shop");
   return (
-    <div className="navbar flex justify-around p-4 shadow-md">
+    <div className="navbar flex justify-around p-4 shadow-md ">
       <div className="nav-logo flex items-center gap-6">
         <img src={logo} className="w-[6rem]" alt="logo" />
-        <p className="text-white text-2xl font-semibold">DivineDeals</p>
+        <p className="text-white text-2xl font-semibold hidden lg:block">DivineDeals</p>
       </div>
-      <ul className="nav-menu flex items-center list-none gap-x-16 text-gray-600 text-base font-medium">
+      <ul className="nav-menu hidden lg:flex items-center list-none gap-x-16 text-gray-600 text-base font-medium">
         <li
           className="flex flex-col text-xl text-white items-center justify-center cursor-pointer"
           onClick={() => {
@@ -65,8 +65,9 @@ export default function Navbar() {
           )}
         </li>
       </ul>
-      <div className="nav-login-cart flex items-center gap-x-12">
-        <button className="w-24 h-8 border text-sm border-gray-600 rounded-full text-gray-600  font-medium bg-white hover:bg-gray-200 focus:outline-none focus:border-gray-700 focus:ring focus:ring-gray-300">
+      <div className="nav-login-cart flex items-center gap-x-12 ">
+        
+        <button className="w-24 h-8 border text-sm border-gray-600 hidden lg:block rounded-full text-gray-600 font-medium bg-white hover:bg-gray-200 focus:outline-none focus:border-gray-700 focus:ring focus:ring-gray-300">
           Login
         </button>
         <img src={cart_icon} className="w-12" alt="cart" />
