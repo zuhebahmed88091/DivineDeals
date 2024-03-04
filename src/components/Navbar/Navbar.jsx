@@ -34,8 +34,8 @@ export default function Navbar() {
             setMenu("men");
           }}
         >
-          <Link to="men">Men</Link>
-          {menu === "/men" ? (
+          <Link to="/men">Men</Link>
+          {menu === "men" ? (
             <hr className="w-10 h-1 rounded-lg bg-red-400 border-red-400" />
           ) : (
             <></>
