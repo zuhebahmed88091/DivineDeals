@@ -1,5 +1,9 @@
+import Hero from "../components/Hero/Hero";
+
 export default function Shop() {
   return (
-    <div>Shop</div>
+    <div>
+      <Hero />
+    </div>
   )
 }
