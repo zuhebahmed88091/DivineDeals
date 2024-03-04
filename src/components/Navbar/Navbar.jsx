@@ -6,15 +6,30 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [menu, setMenu] = useState("shop");
+  const toggleMenu = () => {
+    setMenu(!menu);
+  };
   return (
-    <div className="navbar flex justify-around p-4 shadow-md ">
-      <div className="nav-logo flex items-center gap-6">
+    <div className="navbar flex justify-around p-4 shadow-md lg:justify-between">
+      <button data-collapse-toggle="navbar-hamburger " type="button" className="lg:hidden inline-flex items-center justify-center mt-8 p-2 w-8 h-8 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-hamburger" aria-expanded="false" onClick={toggleMenu}>
+      <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+    </button>
+      <div className="nav-logo flex items-center gap-10 ">
         <img src={logo} className="w-[6rem]" alt="logo" />
         <p className="text-white text-2xl font-semibold hidden lg:block">
           DivineDeals
         </p>
       </div>
-      <ul className="nav-menu hidden lg:flex items-center list-none gap-x-16 text-gray-600 text-base font-medium">
+      <ul
+        className={`${
+          menu
+          ?
+           "hidden":
+            "flex flex-col bg-gray-800 w-full h-[32%] py-4 px-2 absolute top-32 left-0 z-10 gap-8 transition-all duration-300"
+        } lg:flex flex-row items-center list-none gap-x-16 text-gray-600 text-base font-medium`}
+      >
         <li
           className="flex flex-col text-xl text-white items-center justify-center cursor-pointer"
           onClick={() => {
