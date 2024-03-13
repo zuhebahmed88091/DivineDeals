@@ -36,7 +36,7 @@ export default function Navbar() {
             setMenu("shop");
           }}
         >
-          <Link to="/">Shop</Link>
+          <Link style={{textDecoration:"none"}} to="/">Shop</Link>
           {menu === "shop" ? (
             <hr className="w-12 h-1 rounded-lg bg-red-400 border-red-400" />
           ) : (
@@ -49,7 +49,7 @@ export default function Navbar() {
             setMenu("men");
           }}
         >
-          <Link to="/men">Men</Link>
+          <Link style={{textDecoration:"none"}} to="/men">Men</Link>
           {menu === "men" ? (
             <hr className="w-10 h-1 rounded-lg bg-red-400 border-red-400" />
           ) : (
@@ -62,7 +62,7 @@ export default function Navbar() {
             setMenu("women");
           }}
         >
-          <Link to="/women">Women</Link>
+          <Link style={{textDecoration:"none"}} to="/women">Women</Link>
           {menu === "women" ? (
             <hr className="w-20 h-1 rounded-lg bg-red-400 border-red-400" />
           ) : (
@@ -75,7 +75,7 @@ export default function Navbar() {
             setMenu("kids");
           }}
         >
-          <Link to="/kids">Kids</Link>
+          <Link style={{textDecoration:"none"}} to="/kids">Kids</Link>
           {menu === "kids" ? (
             <hr className="w-12 h-1 rounded-lg bg-red-400 border-red-400" />
           ) : (
@@ -84,12 +84,12 @@ export default function Navbar() {
         </li>
       </ul>
       <div className="nav-login-cart flex items-center gap-x-12 ">
-        <Link to="/login">
+        <Link style={{textDecoration:"none"}} to="/login">
           <button className="w-24 h-8 border text-sm border-gray-600 hidden lg:block rounded-full text-gray-600 font-medium bg-white hover:bg-gray-200 focus:outline-none focus:border-gray-700 focus:ring focus:ring-gray-300">
             Login
           </button>
         </Link>
-        <Link to="/cart">
+        <Link style={{textDecoration:"none"}}to="/cart">
           <img src={cart_icon} className="w-12" alt="cart" />
         </Link>
         <div className="nav-cart-count w-4 h-4 flex justify-center items-center -mt-9 -ml-14 rounded-full text-xs bg-red-500 text-white">
